@@ -72,12 +72,12 @@ p5 = sub2["suicidelabel"].value_counts(sort=False,normalize = True)
 suicide_label_freq = pandas.concat(dict(counts = c5, percentages = p5),axis = 1)
 print(suicide_label_freq)
 
-print("Frequency distribution of suicide in children under 14- in categories")
-sub2["child_suicide_label"] =pandas.cut(sub2.suicide0to14per100th,4,labels=["low","medium","high","very high"])
-c6 = sub2["child_suicide_label"].value_counts(sort=False)
-p6 = sub2["child_suicide_label"].value_counts(sort=False,normalize = True)
-child_suicide_label = pandas.concat(dict(counts = c6, percentages = p6),axis = 1)
-print(child_suicide_label)
+print("Frequency distribution of suicide in children under 14 - in categories")
+sub2["childsuicidelabel"] =pandas.cut(sub2.suicide0to14per100th,4,labels=["low","medium","high","very high"])
+c6 = sub2["childsuicidelabel"].value_counts(sort=False)
+p6 = sub2["childsuicidelabel"].value_counts(sort=False,normalize = True)
+child_suicide_label_freq = pandas.concat(dict(counts = c6, percentages = p6),axis = 1)
+print(child_suicide_label_freq)
 
 # Lets see if there is a co-relation between our high internet usage and high overall suicide rate
 print("High internet usage in correlation with high suicide rate per country")
