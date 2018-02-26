@@ -60,7 +60,7 @@ p4 = sub2["internetlabel"].value_counts(sort=False,normalize = True)
 internet_label_freq = pandas.concat(dict(counts = c4, percentages = p4),axis = 1)
 print(internet_label_freq)
 
-# Check the va;lues of categorical variable - internetlabel
+# Check the values of categorical variable - internetlabel
 a = sub2[["country","internetlabel","internetuserate"]]
 print(a.head(10))
 
